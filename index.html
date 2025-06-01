@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create Your Portfolio</h2>
+        <form id="portfolioForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="typeofengineer">Type of Engineer:</label>
+            <select name="typeofengineer" id="typeofeng">
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Mechanical Engineer">Mechanical Engineer</option>
+            </select>
+
+            <label for="achievements">Your Achievements:</label>
+            <textarea id="achievements" rows="4" required
+                placeholder="List your achievements separated by commas"></textarea>
+
+            <button type="submit">Create Portfolio Website</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
