@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}} - Software Engineer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial;
+            background: #f0f4f8;
+            color: #1e293b;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            /* Optionally, add text-align: center; to center all section text */
+        }
+
+        h2 {
+            color: #2563eb;
+        }
+
+        /* Add more styles as needed */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>{{name}}</h1>
+        <p>Software Engineer</p>
+    </header>
+    <section>
+        <div><strong>Email:</strong> {{email}}</div>
+        <div><strong>Phone:</strong> {{phone}}</div>
+        <h2>Technical Skills</h2>
+        <ul>{{skills}}</ul>
+        <h2>Education</h2>
+        <ul>{{education}}</ul>
+        <h2>Projects</h2>
+        <ul>{{workex}}</ul>
+        <h2>About Me</h2>
+        <p>{{intro}}</p>
+    </section>
+    <footer>
+        &copy; {{year}} {{name}}
+    </footer>
+</body>
+
+</html>

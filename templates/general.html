@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{name}} - Portfolio</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial; 
+            background: #f5f7fa; 
+            color: black;
+        }
+        header { 
+            background: #f3ff4f; 
+            color: white; 
+            text-align: center; 
+            padding: 3rem 0; 
+        }
+        section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            /* Optionally, add text-align: center; to center all section text */
+        }
+        h2 { color: #f3ff4f; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{name}}</h1>
+        <p>Professional Portfolio</p>
+    </header>
+    <section>
+        <div><strong>Email:</strong> {{email}}</div>
+        <div><strong>Phone:</strong> {{phone}}</div>
+        <h2>Skills</h2>
+        <ul>{{skills}}</ul>
+        <h2>Education</h2>
+        <ul>{{education}}</ul>
+        <h2>Work Experience</h2>
+        <ul>{{workex}}</ul>
+        <h2>About Me</h2>
+        <p>{{intro}}</p>
+    </section>
+    <footer>
+        &copy; {{year}} {{name}}
+    </footer>
+</body>
+</html>
