@@ -4,8 +4,17 @@ document.getElementById('portfolioForm').addEventListener('submit', function(e) 
     // Get user input
     const name = document.getElementById('name').value;
     const type = document.getElementById('typeofeng').value;
-    const achievementsInput = document.getElementById('achievements').value;
-    const achievements = achievementsInput.split(',').map(a => a.trim()).filter(a => a);
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('pnumber').value;
+    const skillsInput = document.getElementById('Skills').value;
+    const educationInput = document.getElementById('education').value;
+    const workexInput = document.getElementById('workex').value;
+    const intro = document.getElementById('briefintro').value;
+
+    // Split comma-separated values into arrays and clean them up
+    const skills = skillsInput.split(',').map(a => a.trim()).filter(a => a);
+    const education = educationInput.split(',').map(a => a.trim()).filter(a => a);
+    const workex = workexInput.split(',').map(a => a.trim()).filter(a => a);
 
     // HTML template for the portfolio
     const portfolioHTML = `
@@ -38,9 +47,10 @@ document.getElementById('portfolioForm').addEventListener('submit', function(e) 
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        h2 { margin-top: 0; color: #4f8cff; }
+        h2 { margin-top: 2rem; color: #4f8cff; }
         ul { list-style: disc; padding-left: 1.5rem; }
         li { margin-bottom: 0.5rem; }
+        .info { margin-bottom: 1rem; }
         footer {
             text-align: center;
             padding: 1rem 0;
@@ -59,10 +69,21 @@ document.getElementById('portfolioForm').addEventListener('submit', function(e) 
         <p>${type}</p>
     </header>
     <section>
-        <h2>Achievements</h2>
+        <div class="info"><strong>Email:</strong> ${email} &nbsp; <strong>Phone:</strong> ${phone}</div>
+        <h2>Skills</h2>
         <ul>
-            ${achievements.map(a => `<li>${a}</li>`).join('')}
+            ${skills.map(skill => `<li>${skill}</li>`).join('')}
         </ul>
+        <h2>Education</h2>
+        <ul>
+            ${education.map(edu => `<li>${edu}</li>`).join('')}
+        </ul>
+        <h2>Work Experience</h2>
+        <ul>
+            ${workex.map(work => `<li>${work}</li>`).join('')}
+        </ul>
+        <h2>About Me</h2>
+        <p>${intro}</p>
     </section>
     <footer>
         &copy; 2025 ${name}
