@@ -14,15 +14,32 @@
             <label for="name">Your Name:</label>
             <input type="text" id="name" required>
 
-            <label for="typeofengineer">Type of Engineer:</label>
+            <label for="typeofengineer">Choose Your Template </label>
             <select name="typeofengineer" id="typeofeng">
+                <option value="General Portfolio">General Portfolio</option>
                 <option value="Software Engineer">Software Engineer</option>
                 <option value="Mechanical Engineer">Mechanical Engineer</option>
             </select>
 
-            <label for="achievements">Your Achievements:</label>
-            <textarea id="achievements" rows="4" required
-                placeholder="List your achievements separated by commas"></textarea>
+            <label for="Email">Email ID:</label>
+            <input type="text" id="email" placeholder="Email" required>
+
+            <label for="Phoneno">Phone No:</label>
+            <input type="number" id="pnumber" placeholder="Phone No" required>
+
+            <label for="Skills">Skills:</label>
+            <textarea id="Skills" rows="4" required placeholder="List your Skills (separated by commas)"></textarea>
+
+            <label for="Education">Education:</label>
+            <textarea id="education" rows="3" required
+                placeholder="List your Education level and info (separated by commas)"></textarea>
+
+            <label for="WorkExperience">Work Experience:</label>
+            <textarea id="workex" rows="3" placeholder="List your Work Experience (separated by commas)"></textarea>
+
+            <label for="BriefIntroduction">Brief Introduction:</label>
+            <textarea id="briefintro" rows="6" required
+                placeholder="Brief Introduction"></textarea>
 
             <button type="submit">Create Portfolio Website</button>
         </form>
