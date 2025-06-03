@@ -1,13 +1,14 @@
   :root {
-      --bg: #eaf3fb;
-      --card: #d6e8ff;
-      --card-light: #e3f0ff;
-      --accent: #b3d1f6;
-      --accent-dark: #cfe4f7;
-      --text-dark: #1a2636;
-      --text-light: #fff;
-      --primary-font: 'Inter', Arial, sans-serif;
-  }
+  --bg: #eaf6ff;          /* Page background (very light blue) */
+  --card: #cce6ff;        /* Main cards (title, bio, education, workex)  */
+  --card-light: #f0f7ff;  /* Navbar/header and possibly some lighter cards  */
+  --accent: #00d0ff;      /* Accent color for buttons, highlights  */
+  --accent-dark: #0077ff; /* Center photo card background  */
+  --text-dark: #102542;   /* Main text color  */
+  --text-light: #fff;     /* Text on dark backgrounds  */
+  --primary-font: 'Inter', Arial, sans-serif;
+}
+
 
   /* ...rest of the CSS (same as general)... */
   body {
