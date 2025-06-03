@@ -21,25 +21,28 @@
                 <option value="Mechanical Engineer">Mechanical Engineer</option>
             </select>
 
+            <label for="profileImg">Profile Image:</label>
+            <input type="file" id="profileImg" accept="image/*">
+
+
             <label for="Email">Email ID:</label>
             <input type="text" id="email" placeholder="Email" required>
 
             <label for="Phoneno">Phone No:</label>
-            <input type="number" id="pnumber" placeholder="Phone No" required>
+            <input type="number" id="pnumber" placeholder="Phone No" maxlength="10" required>
 
             <label for="Skills">Skills:</label>
-            <textarea id="Skills" rows="4" required placeholder="List your Skills (separated by commas)"></textarea>
+            <textarea id="Skills" rows="4" placeholder="List your Skills (separated by commas)"></textarea>
 
             <label for="Education">Education:</label>
-            <textarea id="education" rows="3" required
+            <textarea id="education" rows="3"
                 placeholder="List your Education level and info (separated by commas)"></textarea>
 
             <label for="WorkExperience">Work Experience:</label>
             <textarea id="workex" rows="3" placeholder="List your Work Experience (separated by commas)"></textarea>
 
             <label for="BriefIntroduction">Brief Introduction:</label>
-            <textarea id="briefintro" rows="6" required
-                placeholder="Brief Introduction"></textarea>
+            <textarea id="briefintro" rows="6" placeholder="Brief Introduction"></textarea>
 
             <button type="submit">Create Portfolio Website</button>
         </form>
