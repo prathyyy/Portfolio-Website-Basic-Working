@@ -3,7 +3,7 @@
     /* Affects the page background */
     --card: #ffd6d6;
     /* Affects main card blocks (e.g., left title, bottom bio, right education) */
-    --card-light: #ffe3e3;
+    --card-light: #ffd6d6;
     /* Affects the navbar/header and possibly some lighter cards */
     --accent: #f6b3b3;
     /* (Not directly visible in your screenshot, but can be used for buttons or highlights) */
@@ -40,12 +40,6 @@ header {
     background: var(--card-light);
 }
 
-.header-left {
-    font-weight: 600;
-    font-size: 1.1rem;
-    letter-spacing: 0.05em;
-}
-
 nav a {
     margin-left: 32px;
     text-decoration: none;
@@ -63,11 +57,12 @@ nav a:hover {
 .grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr;
-    grid-template-rows: 260px 140px;
+    grid-template-rows: 200px 200px 160px;
     gap: 24px;
     grid-template-areas:
-        "title photo info"
-        "bio contact info";
+        "title photo skills"
+        "bio workex education"
+        "contact contact contact";
 }
 
 .card {
@@ -75,41 +70,23 @@ nav a:hover {
     border-radius: 18px;
     padding: 28px 24px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    min-width: 0;
 }
 
 .card-title {
     grid-area: title;
     background: var(--card);
+    display: flex;
+    align-items: center;
     font-size: 2rem;
-    font-weight: 700;
-    justify-content: flex-start;
-    gap: 12px;
-    position: relative;
-    min-width: 0;
-}
-
-.card-title .italic {
-    font-style: italic;
-    font-weight: 400;
-}
-
-.card-title .bold {
-    font-weight: 800;
-    display: inline-block;
 }
 
 .card-photo {
     grid-area: photo;
     background: var(--accent-dark);
-    align-items: center;
-    justify-content: center;
     padding: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-photo img {
@@ -119,96 +96,68 @@ nav a:hover {
     max-height: 220px;
     object-fit: cover;
     border-radius: 16px;
-    margin: auto;
-    display: block;
-    background: #e2bcbc;
 }
 
-.card-info {
-    grid-area: info;
+.card-skills {
+    grid-area: skills;
     background: var(--card);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: flex-start;
-}
-
-.info-title {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.info-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
 }
 
 .card-bio {
     grid-area: bio;
-    font-size: 1rem;
     background: var(--accent-dark);
-    color: #232323;
-    letter-spacing: 0.01em;
-    line-height: 1.6;
-    position: relative;
+}
+
+.card-workex {
+    grid-area: workex;
+    background: var(--card);
+}
+
+.card-education {
+    grid-area: education;
+    background: var(--card);
 }
 
 .card-contact {
     grid-area: contact;
     background: var(--card);
-    align-items: flex-start;
-    justify-content: flex-end;
-    font-size: 1.1rem;
-    font-weight: 500;
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.contact-title {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.contact-link {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #e26a6a;
-    color: var(--text-light);
-    border-radius: 8px;
-    text-decoration: none;
+.info-title {
     font-weight: 600;
-    transition: background 0.2s;
-    margin-top: 8px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
 }
 
-.contact-link:hover {
-    background: #c94a4a;
+.info-list {
+    padding-left: 20px;
+}
+
+.info-list li {
+    margin-bottom: 8px;
 }
 
 @media (max-width: 900px) {
     .grid {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, auto);
+        grid-template-rows: auto;
         grid-template-areas:
             "title"
             "photo"
-            "info"
+            "skills"
             "bio"
-            "contact"
-            "social";
+            "workex"
+            "education"
+            "contact";
         gap: 18px;
     }
 
-    .main-container {
-        padding: 0 4px;
-    }
-
-    .card-photo img {
-        max-width: 100%;
-        max-height: 180px;
+    .card-contact {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

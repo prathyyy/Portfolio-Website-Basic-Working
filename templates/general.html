@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>{{name}} - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="templates/general.css">
-
 </head>
-
 <body>
     <div class="main-container">
-        <!-- Navbar -->
         <header>
             <nav>
                 <a href="#skills">SKILLS</a>
@@ -19,7 +15,6 @@
                 <a href="#contact">CONTACT</a>
             </nav>
         </header>
-        <!-- Grid Layout -->
         <section class="grid">
             <!-- Title Card -->
             <div class="card card-title">
@@ -28,44 +23,48 @@
                     <span class="italic">{{type}}</span>
                 </div>
             </div>
-            <!-- Center Photo Card (optional: add image upload later) -->
+
+            <!-- Center Photo Card -->
             <div class="card card-photo">
                 {{imgSrc}}
             </div>
-            <!-- Info Card (Skills) -->
-            <div class="card card-info" id="skills">
+
+            <!-- Skills Card -->
+            <div class="card card-skills" id="skills">
                 <div class="info-title">Skills</div>
                 <ul class="info-list">
                     {{skills}}
                 </ul>
             </div>
+
             <!-- Bio Card -->
             <div class="card card-bio" id="about">
                 {{intro}}
             </div>
-            <!-- Contact Card -->
-            <div class="card card-contact" id="contact">
-                <div class="contact-title">Contact Info</div>
-                <div>Email: {{email}}</div>
-                <div>Phone: {{phone}}</div>
+
+            <!-- Work Experience Card -->
+            <div class="card card-workex" id="WorkExperience">
+                <div class="info-title">Work Experience</div>
+                <ul class="info-list">
+                    {{workex}}
+                </ul>
             </div>
+
             <!-- Education Card -->
-            <div class="card card-info" id="education">
+            <div class="card card-education" id="education">
                 <div class="info-title">Education</div>
                 <ul class="info-list">
                     {{education}}
                 </ul>
             </div>
 
-            <div class="card card-workex" id="WorkExperience">
-                <div class="title">Work Experience</div>
-                <ul class="info-list">
-                </ul>
+            <!-- Contact Card -->
+            <div class="card card-contact" id="contact">
+                <div class="contact-title">Contact Info</div>
+                <div>Email: {{email}}</div>
+                <div>Phone: {{phone}}</div>
             </div>
-
-
         </section>
     </div>
 </body>
-
 </html>
